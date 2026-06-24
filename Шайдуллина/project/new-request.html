@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Новая заявка | Учусь.РФ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Учусь.<span>РФ</span></a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <!-- Соцсети в шапке -->
+                <div class="social-icons" style="margin-right: 1rem;">
+                    <a href="#" class="social-icon" target="_blank" title="Одноклассники">
+                        <img src="./assets/images/social/odnoc.png" alt="odnoc">
+                    </a>
+                    <a href="#" class="social-icon" target="_blank" title="VK">
+                        <img src="assets/images/social/vk.png" alt="ВКонтакте">
+                    </a>
+                </div>
+                <button class="hamburger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav></nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <h2 style="color: var(--primary-dark); margin-bottom: 2rem;">
+                <i class="fas fa-pen"></i> Новая заявка
+            </h2>
+
+            <form id="new-request-form">
+                <div class="form-group">
+                    <label for="request-course">Выберите курс *</label>
+                    <select id="request-course" required>
+                        <option value="">-- Выберите курс --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="request-date">Дата старта *</label>
+                    <input type="text" id="request-date" placeholder="ДД.ММ.ГГГГ" required>
+                    <span class="help-text">Формат: ДД.ММ.ГГГГ</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="request-payment">Способ оплаты *</label>
+                    <select id="request-payment" required>
+                        <option value="">-- Выберите способ --</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block">
+                    <i class="fas fa-paper-plane"></i> Отправить заявку
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <p>© 2026 Учусь.РФ. Все права защищены.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon" target="_blank" title="Telegram">
+                    <img src="assets/images/social/telegram.png" alt="Telegram">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="VK">
+                    <img src="assets/images/social/vk.png" alt="ВКонтакте">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="YouTube">
+                    <img src="assets/images/social/youtube.png" alt="YouTube">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="WhatsApp">
+                    <img src="assets/images/social/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="Instagram">
+                    <img src="assets/images/social/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

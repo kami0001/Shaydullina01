@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Личный кабинет | Учусь.РФ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Учусь.<span>РФ</span></a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <!-- Соцсети в шапке -->
+                <div class="social-icons" style="margin-right: 1rem;">
+                    <a href="#" class="social-icon" target="_blank" title="Одноклассники">
+                        <img src="./assets/images/social/odnoc.png" alt="odnoc">
+                    </a>
+                    <a href="#" class="social-icon" target="_blank" title="VK">
+                        <img src="assets/images/social/vk.png" alt="ВКонтакте">
+                    </a>
+                </div>
+                <button class="hamburger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav></nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="color: var(--primary-dark); margin-bottom: 2rem;">
+            <i class="fas fa-user-circle"></i> Личный кабинет
+        </h1>
+
+       <!-- Слайдер с квадратными фотографиями -->
+<div class="card">
+    <div class="slider-container">
+        <div class="slider-track">
+            <div class="slide">
+                <img src="assets/images/slide-1.png" alt="Курсы повышения квалификации">
+            </div>
+            <div class="slide">
+                <img src="assets/images/slide-2.png" alt="Профессиональная переподготовка">
+            </div>
+            <div class="slide">
+                <img src="assets/images/slide-3.png" alt="Охрана труда">
+            </div>
+            <div class="slide">
+                <img src="assets/images/slide-4.png" alt="Образовательный портал">
+            </div>
+        </div>
+        <button class="slider-btn prev">❮</button>
+        <button class="slider-btn next">❯</button>
+        <div class="slider-dots">
+            <button class="slider-dot active"></button>
+            <button class="slider-dot"></button>
+            <button class="slider-dot"></button>
+            <button class="slider-dot"></button>
+        </div>
+    </div>
+</div>
+
+        <!-- Приветствие -->
+        <div class="card">
+            <h2 id="welcome-message" style="color: var(--primary-dark);">Здравствуйте!</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="new-request.html" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Новая заявка
+                </a>
+            </div>
+        </div>
+
+        <!-- История заявок -->
+        <div class="card">
+            <h3 class="card-title">
+                <i class="fas fa-history"></i> История заявок
+            </h3>
+            <div id="user-requests"></div>
+        </div>
+
+        <!-- Отзывы -->
+        <div class="card">
+            <h3 class="card-title">
+                <i class="fas fa-star"></i> Мои отзывы
+            </h3>
+            <div id="user-reviews"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-social">
+            <p>© 2026 Учусь.РФ. Все права защищены.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon" target="_blank" title="Telegram">
+                    <img src="assets/images/social/telegram.png" alt="Telegram">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="VK">
+                    <img src="assets/images/social/vk.png" alt="ВКонтакте">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="YouTube">
+                    <img src="assets/images/social/youtube.png" alt="YouTube">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="WhatsApp">
+                    <img src="assets/images/social/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="Instagram">
+                    <img src="assets/images/social/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
