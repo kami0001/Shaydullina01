@@ -163,11 +163,26 @@ function generateId() {
 }
 
 function formatDate(dateStr) {
-    const date = new Date(dateStr);
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const year = date.getFullYear();
-    return `${day}.${month}.${year}`;
+    if (!dateStr) return '—';
+    
+    // Если уже в формате ДД.ММ.ГГГГ
+    if (/^\d{2}\.\d{2}\.\d{4}$/.test(dateStr)) {
+        return dateStr;
+    }
+    
+    // Пытаемся распарсить ISO дату
+    try {
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) {
+            return dateStr;
+        }
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}.${month}.${year}`;
+    } catch (e) {
+        return dateStr;
+    }
 }
 
 function formatDateTime(dateStr) {
@@ -1002,11 +1017,15 @@ function initNewRequest() {
             return;
         }
 
+        // 🔧 ПРЕОБРАЗОВАНИЕ ДАТЫ В ISO ФОРМАТ
+        const dateParts = startDate.split('.');
+        const isoDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+
         const user = getCurrentUser();
         const request = createRequest({
             userId: user.id,
             course: course,
-            startDate: startDate,
+            startDate: isoDate, // Сохраняем в ISO формате
             paymentMethod: paymentMethod
         });
 
