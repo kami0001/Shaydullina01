@@ -1049,3 +1049,97 @@ table tr:hover {
 .justify-between {
     justify-content: space-between;
 }
+/* ============================================
+   СОЦИАЛЬНЫЕ СЕТИ
+   ============================================ */
+
+   .social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon:hover img {
+    filter: brightness(1.1);
+}
+
+/* Размеры для разных мест */
+.social-icon-sm {
+    width: 32px;
+    height: 32px;
+}
+
+.social-icon-lg {
+    width: 48px;
+    height: 48px;
+}
+
+/* Подвал с соцсетями */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-social .social-label {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-icon-lg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-icon-lg {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-icons {
+        gap: 0.75rem;
+    }
+}

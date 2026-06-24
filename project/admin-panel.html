@@ -14,11 +14,22 @@
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">Учусь.<span>РФ</span></a>
-            <button class="hamburger" aria-label="Меню">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <!-- Соцсети в шапке -->
+                <div class="social-icons" style="margin-right: 1rem;">
+                    <a href="#" class="social-icon" target="_blank" title="Одноклассники">
+                        <img src="./assets/images/social/odnoc.png" alt="odnoc">
+                    </a>
+                    <a href="#" class="social-icon" target="_blank" title="VK">
+                        <img src="assets/images/social/vk.png" alt="ВКонтакте">
+                    </a>
+                </div>
+                <button class="hamburger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
             <nav></nav>
         </div>
     </header>
@@ -100,7 +111,26 @@
     </main>
 
     <footer>
-        <p>© 2026 Учусь.РФ. Все права защищены.</p>
+        <div class="footer-social">
+            <p>© 2026 Учусь.РФ. Все права защищены.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon" target="_blank" title="Telegram">
+                    <img src="assets/images/social/telegram.png" alt="Telegram">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="VK">
+                    <img src="assets/images/social/vk.png" alt="ВКонтакте">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="YouTube">
+                    <img src="assets/images/social/youtube.png" alt="YouTube">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="WhatsApp">
+                    <img src="assets/images/social/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="Instagram">
+                    <img src="assets/images/social/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
